@@ -1,0 +1,173 @@
+.bill-display {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+}
+
+.bill-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.bill-header h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.vendor-info h3 {
+  font-size: 1.5rem;
+  color: #667eea;
+  margin-bottom: 0.5rem;
+}
+
+.bill-date {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.bill-items {
+  margin-bottom: 2rem;
+}
+
+.bill-items h3 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.items-list {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #f5f5f5;
+  transition: background-color 0.2s;
+}
+
+.item-row:hover {
+  background: rgba(102, 126, 234, 0.05);
+}
+
+.item-row:last-child {
+  border-bottom: none;
+}
+
+.item-details {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.item-name {
+  font-weight: 500;
+  color: #333;
+}
+
+.item-quantity {
+  background: #667eea;
+  color: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.item-price {
+  font-weight: 600;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.bill-summary {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 15px;
+  border: 1px solid #e9ecef;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.summary-row:not(:last-child) {
+  border-bottom: 1px solid #dee2e6;
+}
+
+.summary-row span:first-child {
+  color: #666;
+  font-weight: 500;
+}
+
+.summary-row span:last-child {
+  font-weight: 600;
+  color: #333;
+}
+
+.summary-row.total {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #667eea;
+  border-bottom: none;
+  padding-top: 1rem;
+  margin-top: 0.5rem;
+  border-top: 2px solid #dee2e6;
+}
+
+/* Scrollbar styling */
+.items-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.items-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.items-list::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.items-list::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+@media (max-width: 768px) {
+  .bill-display {
+    padding: 1.5rem;
+  }
+  
+  .bill-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .vendor-info h3 {
+    font-size: 1.2rem;
+  }
+  
+  .item-row {
+    padding: 0.6rem 0;
+  }
+  
+  .item-price {
+    font-size: 1rem;
+  }
+}
